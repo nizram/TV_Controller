@@ -65,19 +65,6 @@ ser.isOpen()
 ON=bytearray([0x9FH,0x80H,0x60H,0x4EH,0x00H,0xCDH])
 #OFF="9FH 80H 60H 4FH 00H CEH"
 OFF=bytearray([0x9FH,0x80H,0x60H,0x4FH,0x00H,0xCEH])
-#FLAG1=0x9FH
-#FLAG2=0x80H
-#FLAG3=0x60H
-#FLAG4=0x4FH
-#FLAG5=0x00H
-#FLAG6=0xCEH
 
 ser.write(OFF)
-#ser.write(chr(FLAG1))
-#ser.write(chr(FLAG2))
-#ser.write(chr(FLAG3))
-#ser.write(chr(FLAG4))
-#ser.write(chr(FLAG5))
-#ser.write(chr(FLAG6))
-
 ser.close()

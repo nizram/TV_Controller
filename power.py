@@ -61,9 +61,10 @@ ser.open()
 ser.isOpen()
 
 
-ON="9FH 80H 60H 4EH 00H CDH"
-OFF="9FH 80H 60H 4FH 00H CEH"
-OFF2="0x9FH80H60H4FH00HCEH"
+#ON="9FH 80H 60H 4EH 00H CDH"
+ON=bytearray([0x9FH,0x80H,0x60H,0x4EH,0x00H,0xCDH])
+#OFF="9FH 80H 60H 4FH 00H CEH"
+OFF=bytearray([0x9FH,0x80H,0x60H,0x4FH,0x00H,0xCEH])
 #FLAG1=0x9FH
 #FLAG2=0x80H
 #FLAG3=0x60H
@@ -71,7 +72,7 @@ OFF2="0x9FH80H60H4FH00HCEH"
 #FLAG5=0x00H
 #FLAG6=0xCEH
 
-ser.write(OFF2)
+ser.write(OFF)
 #ser.write(chr(FLAG1))
 #ser.write(chr(FLAG2))
 #ser.write(chr(FLAG3))
